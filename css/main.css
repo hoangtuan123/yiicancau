@@ -1,0 +1,14 @@
+#logoArea .navbar-inner{
+	background-color: #3A3F44;
+}
+
+.modal.fade {
+	width: auto;
+	height: auto;
+}
+.modal-body {
+	max-height: 100%;
+}
+#sidebar a{
+	cursor:pointer;
+}
