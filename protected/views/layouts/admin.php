@@ -33,6 +33,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
+    <?php
+      $baseUrl = Yii::app()->baseUrl; 
+      $js = Yii::app()->getClientScript();
+      $js->registerScriptFile($baseUrl.'/themesAdmin/plugins/jQuery/jQuery-2.1.4.min.js');
+      $js->registerScriptFile($baseUrl.'/themesAdmin/bootstrap/js/bootstrap.min.js');
+      $js->registerScriptFile($baseUrl.'/themesAdmin/dist/js/app.min.js');
+
+      $js->registerScriptFile($baseUrl.'/js/angular.min.js');
+      $js->registerScriptFile($baseUrl.'/js/angular-route.js');
+
+      $js->registerScriptFile($baseUrl.'/themesAdmin/dist/js/ScriptsAdmin.js');
+    ?>
   </head>
   <!--
   BODY TAG OPTIONS:
@@ -54,8 +68,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   |               | sidebar-mini                            |
   |---------------------------------------------------------|
   -->
-  <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
+  <body class="hold-transition skin-blue sidebar-mini" ng-app="AppAdmin">
+    <div class="wrapper" >
 
       <!-- Main Header -->
       <header class="main-header">
@@ -266,19 +280,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            Page Header
-            <small>Optional description</small>
-          </h1>
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-            <li class="active">Here</li>
-          </ol>
+        <section class="content-header" >
+       
+
         </section>
 
         <!-- Main content -->
-        <section class="content">
+        <section class="content" ng-view >
 
           <!-- Your Page Content Here -->
 
@@ -370,13 +378,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- AdminLTE App -->
     <!--<script src="dist/js/app.min.js"></script>-->
 
-    <?php
-      $baseUrl = Yii::app()->baseUrl; 
-      $js = Yii::app()->getClientScript();
-      $js->registerScriptFile($baseUrl.'/themesAdmin/plugins/jQuery/jQuery-2.1.4.min.js');
-      $js->registerScriptFile($baseUrl.'/themesAdmin/bootstrap/js/bootstrap.min.js');
-      $js->registerScriptFile($baseUrl.'/themesAdmin/dist/js/app.min.js');
-    ?>
+  
 
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
          Both of these plugins are recommended to enhance the

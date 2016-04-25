@@ -102,14 +102,18 @@ body {
 }
 </style>
 
-<script type="text/javascript">
-  $('.message a').click(function(){
-   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-});
-</script>
 
-<div class="login-page">
-  <div class="form">
+  <?php
+      $baseUrl = Yii::app()->baseUrl; 
+      $js = Yii::app()->getClientScript();
+      $js->registerScriptFile($baseUrl.'/js/angular.min.js');
+      $js->registerScriptFile($baseUrl.'/js/angular-route.js');
+      $js->registerScriptFile($baseUrl.'/themesAdmin/dist/js/ScriptsAdmin.js');
+      CClientScript::POS_HEAD;
+    ?>
+
+<div class="login-page" ng-app="AppAdmin" >
+  <div class="form" >
     <form class="register-form">
       <input type="text" placeholder="name"/>
       <input type="password" placeholder="password"/>
@@ -117,10 +121,10 @@ body {
       <button>create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
+    <form class="login-form" ng-submit="submitbutton()"  method="post" ng-controller="loginAdmin">
+      <input type="text" placeholder="username" ng-model="username" />
+      <input type="password" placeholder="password" ng-model="password" />
+      <button type="submit">login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
   </div>

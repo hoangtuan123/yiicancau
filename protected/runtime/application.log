@@ -3673,3 +3673,19 @@ Stack trace:
 REQUEST_URI=/yiicancau/index.php?r=site/GetSilder
 HTTP_REFERER=http://localhost:8888/yiicancau/
 ---
+2016/04/25 09:19:08 [error] [php] Undefined variable: js (C:\xampp\htdocs\yiicancau\protected\views\admin\login.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\yiicancau\framework\web\CController.php(869): AdminController->renderFile()
+#1 C:\xampp\htdocs\yiicancau\protected\controllers\AdminController.php(44): AdminController->renderPartial()
+#2 C:\xampp\htdocs\yiicancau\framework\web\actions\CInlineAction.php(49): AdminController->actionLogin()
+#3 C:\xampp\htdocs\yiicancau\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yiicancau\framework\web\CController.php(286): AdminController->runAction()
+#5 C:\xampp\htdocs\yiicancau\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#6 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(282): AdminController->run()
+#7 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yiicancau\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yiicancau\index.php(14): CWebApplication->run()
+REQUEST_URI=/yiicancau/index.php?r=admin/login
+in C:\xampp\htdocs\yiicancau\protected\views\admin\login.php (127)
+in C:\xampp\htdocs\yiicancau\protected\controllers\AdminController.php (44)
+in C:\xampp\htdocs\yiicancau\index.php (14)
