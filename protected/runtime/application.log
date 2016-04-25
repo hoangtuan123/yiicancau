@@ -3651,3 +3651,25 @@ REQUEST_URI=/yiicancau/index.php?r=admin/Index
 in C:\xampp\htdocs\yiicancau\protected\views\layouts\admin.php (374)
 in C:\xampp\htdocs\yiicancau\protected\controllers\AdminController.php (36)
 in C:\xampp\htdocs\yiicancau\index.php (14)
+2016/04/25 05:25:41 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'databasecancau.slider' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Slider`.
+in C:\xampp\htdocs\yiicancau\protected\controllers\SiteController.php (161)
+in C:\xampp\htdocs\yiicancau\index.php (14)
+2016/04/25 05:25:41 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Slider" for active record class "Slider" cannot be found in the database.' in C:\xampp\htdocs\yiicancau\framework\db\ar\CActiveRecord.php:2387
+Stack trace:
+#0 C:\xampp\htdocs\yiicancau\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Slider))
+#1 C:\xampp\htdocs\yiicancau\framework\db\ar\CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\yiicancau\framework\db\ar\CActiveRecord.php(1355): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\yiicancau\framework\db\ar\CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\yiicancau\protected\controllers\SiteController.php(161): CActiveRecord->findAll(Object(CDbCriteria))
+#5 C:\xampp\htdocs\yiicancau\framework\web\actions\CInlineAction.php(49): SiteController->actionGetSilder()
+#6 C:\xampp\htdocs\yiicancau\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yiicancau\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yiicancau\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(282): CController->run('GetSilder')
+#10 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(141): CWebApplication->runController('site/GetSilder')
+#11 C:\xampp\htdocs\yiicancau\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\yiicancau\index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiicancau/index.php?r=site/GetSilder
+HTTP_REFERER=http://localhost:8888/yiicancau/
+---
