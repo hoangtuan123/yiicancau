@@ -1,4 +1,5 @@
 
+<head>
 <style type="text/css">
   @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
@@ -109,9 +110,15 @@ body {
       $js->registerScriptFile($baseUrl.'/js/angular.min.js');
       $js->registerScriptFile($baseUrl.'/js/angular-route.js');
       $js->registerScriptFile($baseUrl.'/themesAdmin/dist/js/ScriptsAdmin.js');
-      CClientScript::POS_HEAD;
+      //echo $baseUrl;
+      //print_r($js);
     ?>
 
+
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="themesAdmin/dist/js/ScriptsAdmin.js"></script>
+</head>
 <div class="login-page" ng-app="AppAdmin" >
   <div class="form" >
     <form class="register-form">
@@ -121,10 +128,10 @@ body {
       <button>create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
-    <form class="login-form" ng-submit="submitbutton()"  method="post" ng-controller="loginAdmin">
+    <form class="login-form"  method="post" ng-controller="loginAdmin">
       <input type="text" placeholder="username" ng-model="username" />
       <input type="password" placeholder="password" ng-model="password" />
-      <button type="submit">login</button>
+      <button type="submit"  ng-click="submitbutton()">login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
   </div>
