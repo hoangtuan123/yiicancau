@@ -188,15 +188,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <!-- The user image in the navbar-->
                   <img src="themesAdmin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs">Alexander Pierce</span>
+                  <span class="hidden-xs"><?php echo Yii::app()->user->name ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
                   <li class="user-header">
                     <img src="themesAdmin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     <p>
-                      Alexander Pierce - Web Developer
-                      <small>Member since Nov. 2012</small>
+                      <?php echo Yii::app()->user->getState('displayname');  ?>
+                      <small></small>
                     </p>
                   </li>
                   <!-- Menu Body -->
@@ -223,8 +223,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </ul>
               </li>
               <!-- Control Sidebar Toggle Button -->
-              <li>
-                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              <li ng-controller="loginOut" >
+                <a href="#" data-toggle="control-sidebar" style="cursor:point" ng-click="submitbutton()" > <!--<i class="fa fa-gears"></i>-->
+                    LogOut
+                </a>
               </li>
             </ul>
           </div>
@@ -242,13 +244,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <img src="themesAdmin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>Alexander Pierce</p>
+              <p><?php echo Yii::app()->user->getState('displayname'); ?></p>
               <!-- Status -->
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
 
           <!-- search form (Optional) -->
+          <!--
           <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
               <input type="text" name="q" class="form-control" placeholder="Search...">
@@ -257,13 +260,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </span>
             </div>
           </form>
+          -->
           <!-- /.search form -->
 
           <!-- Sidebar Menu -->
-          <ul class="sidebar-menu">
-            <li class="header">HEADER</li>
+          <ul class="sidebar-menu" ng-controller="MenuAdmin">
+            <li class="header">MENU</li>
+            <li ng-repeat="m in menuadmin"><a href="#/{{m.Name}}"><i class="fa fa-link"></i> <span>{{m.Name}}</span></a></li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+            <!--<li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
             <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
             <li class="treeview">
               <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
@@ -272,6 +277,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <li><a href="#">Link in level 2</a></li>
               </ul>
             </li>
+          -->
           </ul><!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->
@@ -294,53 +300,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div><!-- /.content-wrapper -->
 
       <!-- Main Footer -->
-      <footer class="main-footer">
-        <!-- To the right -->
-        <div class="pull-right hidden-xs">
-          Anything you want
-        </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
-      </footer>
-
+    
       <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">
         <!-- Create the tabs -->
         <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
           <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-          <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+         <!-- <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>-->
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
           <!-- Home tab content -->
           <div class="tab-pane active" id="control-sidebar-home-tab">
-            <h3 class="control-sidebar-heading">Recent Activity</h3>
-            <ul class="control-sidebar-menu">
-              <li>
-                <a href="javascript::;">
-                  <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                    <p>Will be 23 on April 24th</p>
-                  </div>
-                </a>
-              </li>
+            <h3 class="control-sidebar-heading">Setting</h3>
+            <ul class="control-sidebar-menu" >
+              
             </ul><!-- /.control-sidebar-menu -->
 
-            <h3 class="control-sidebar-heading">Tasks Progress</h3>
-            <ul class="control-sidebar-menu">
-              <li>
-                <a href="javascript::;">
-                  <h4 class="control-sidebar-subheading">
-                    Custom Template Design
-                    <span class="label label-danger pull-right">70%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                  </div>
-                </a>
-              </li>
-            </ul><!-- /.control-sidebar-menu -->
+            
 
           </div><!-- /.tab-pane -->
           <!-- Stats tab content -->
@@ -364,9 +341,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </aside><!-- /.control-sidebar -->
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
-          <div ng-controller="loginOut">
-            <button type="submit"  ng-click="submitbutton()">logout</button>
-          </div>
+         
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
 

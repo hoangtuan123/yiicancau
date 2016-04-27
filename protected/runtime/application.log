@@ -3815,3 +3815,157 @@ Stack trace:
 REQUEST_URI=/yiicancau/index.php?r=admin/Logout
 HTTP_REFERER=http://localhost:8888/yiicancau/index.php?r=admin/index
 ---
+2016/04/27 08:27:40 [error] [exception.CException] exception 'CException' with message 'Property "WebUser.displayname" is not defined.' in C:\xampp\htdocs\yiicancau\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiicancau\framework\web\auth\CWebUser.php(146): CComponent->__get('displayname')
+#1 C:\xampp\htdocs\yiicancau\protected\views\layouts\admin.php(198): CWebUser->__get('displayname')
+#2 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiicancau\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiicancau\protected\controllers\AdminController.php(59): CController->render('index')
+#6 C:\xampp\htdocs\yiicancau\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#7 C:\xampp\htdocs\yiicancau\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yiicancau\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiicancau\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiicancau\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yiicancau\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(282): CController->run('index')
+#16 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/index')
+#17 C:\xampp\htdocs\yiicancau\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\yiicancau\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/yiicancau/index.php?r=admin/index
+---
+2016/04/27 08:28:19 [error] [exception.CException] exception 'CException' with message 'Property "WebUser.displayname" is not defined.' in C:\xampp\htdocs\yiicancau\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiicancau\framework\web\auth\CWebUser.php(146): CComponent->__get('displayname')
+#1 C:\xampp\htdocs\yiicancau\protected\views\layouts\admin.php(198): CWebUser->__get('displayname')
+#2 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiicancau\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiicancau\protected\controllers\AdminController.php(59): CController->render('index')
+#6 C:\xampp\htdocs\yiicancau\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#7 C:\xampp\htdocs\yiicancau\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yiicancau\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiicancau\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiicancau\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yiicancau\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(282): CController->run('index')
+#16 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/index')
+#17 C:\xampp\htdocs\yiicancau\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\yiicancau\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/yiicancau/index.php?r=admin/index
+---
+2016/04/27 08:28:20 [error] [exception.CException] exception 'CException' with message 'Property "WebUser.displayname" is not defined.' in C:\xampp\htdocs\yiicancau\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiicancau\framework\web\auth\CWebUser.php(146): CComponent->__get('displayname')
+#1 C:\xampp\htdocs\yiicancau\protected\views\layouts\admin.php(198): CWebUser->__get('displayname')
+#2 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiicancau\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiicancau\protected\controllers\AdminController.php(59): CController->render('index')
+#6 C:\xampp\htdocs\yiicancau\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#7 C:\xampp\htdocs\yiicancau\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yiicancau\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiicancau\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiicancau\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yiicancau\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(282): CController->run('index')
+#16 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/index')
+#17 C:\xampp\htdocs\yiicancau\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\yiicancau\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/yiicancau/index.php?r=admin/index
+---
+2016/04/27 08:28:20 [error] [exception.CException] exception 'CException' with message 'Property "WebUser.displayname" is not defined.' in C:\xampp\htdocs\yiicancau\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiicancau\framework\web\auth\CWebUser.php(146): CComponent->__get('displayname')
+#1 C:\xampp\htdocs\yiicancau\protected\views\layouts\admin.php(198): CWebUser->__get('displayname')
+#2 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiicancau\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiicancau\protected\controllers\AdminController.php(59): CController->render('index')
+#6 C:\xampp\htdocs\yiicancau\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#7 C:\xampp\htdocs\yiicancau\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yiicancau\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiicancau\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiicancau\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yiicancau\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(282): CController->run('index')
+#16 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/index')
+#17 C:\xampp\htdocs\yiicancau\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\yiicancau\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/yiicancau/index.php?r=admin/index
+---
+2016/04/27 08:28:20 [error] [exception.CException] exception 'CException' with message 'Property "WebUser.displayname" is not defined.' in C:\xampp\htdocs\yiicancau\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiicancau\framework\web\auth\CWebUser.php(146): CComponent->__get('displayname')
+#1 C:\xampp\htdocs\yiicancau\protected\views\layouts\admin.php(198): CWebUser->__get('displayname')
+#2 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yiicancau\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiicancau\framework\web\CController.php(784): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiicancau\protected\controllers\AdminController.php(59): CController->render('index')
+#6 C:\xampp\htdocs\yiicancau\framework\web\actions\CInlineAction.php(49): AdminController->actionIndex()
+#7 C:\xampp\htdocs\yiicancau\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yiicancau\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiicancau\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiicancau\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yiicancau\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(282): CController->run('index')
+#16 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/index')
+#17 C:\xampp\htdocs\yiicancau\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\yiicancau\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/yiicancau/index.php?r=admin/index
+---
+2016/04/27 10:05:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiicancau\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yiicancau\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiicancau\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiicancau\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiicancau\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiicancau\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(282): CController->run('Oitm')
+#8 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/Oitm')
+#9 C:\xampp\htdocs\yiicancau\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yiicancau\index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiicancau/index.php?r=admin/Oitm
+HTTP_REFERER=http://localhost:8888/yiicancau/index.php?r=admin/index
+---
+2016/04/27 10:06:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiicancau\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\yiicancau\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiicancau\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiicancau\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiicancau\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiicancau\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiicancau\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(282): CController->run('Oitm')
+#8 C:\xampp\htdocs\yiicancau\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/Oitm')
+#9 C:\xampp\htdocs\yiicancau\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yiicancau\index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiicancau/index.php?r=admin/Oitm
+HTTP_REFERER=http://localhost:8888/yiicancau/index.php?r=admin/index
+---

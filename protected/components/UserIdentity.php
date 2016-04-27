@@ -45,7 +45,8 @@ class UserIdentity extends CUserIdentity
         else
         {
             $this->id=$record->id;
-            $this->setState('roles', $record->role);            
+            $this->setState('roles', $record->role); 
+            $this->setState('displayname', $record->displayname);            
             $this->errorCode=self::ERROR_NONE;
         }
         return !$this->errorCode;

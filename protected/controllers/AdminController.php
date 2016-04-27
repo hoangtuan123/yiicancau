@@ -17,7 +17,7 @@ class AdminController extends Controller
 	{   
 	    return array(
 	        array('allow',
-	            'actions'=>array('Index','Logout'),
+	            'actions'=>array('Index','Logout','GetMenu','Oitm','OitmJson','Oing','Oitb','Ormc','Slide','OingJson','OitbJson','OrmcJson','SlideJson'),
 	            'roles'=>array('1'),
 	        ),
 	        array('allow',
@@ -57,6 +57,12 @@ class AdminController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		//$records = Menu::model()->findAll();
 		$this->render('index');
+	}
+
+	public function actionGetMenu()
+	{
+		$menu = Menu::model()->findAll();  
+		$this->renderJSON($menu);
 	}
 
 	public function actionAuLogin()
@@ -121,4 +127,61 @@ class AdminController extends Controller
 		$this->renderJSON("success");
 	}
 	
+
+
+	public function actionOitm()
+	{
+		$this->renderPartial('oitm');
+	}
+	public function actionOitmJson()
+	{
+		$findO = Oitm::Model()->findAll();
+
+		$this->renderJSON($findO);
+	}
+
+	public function actionOing()
+	{
+		$this->renderPartial('oing');
+	}
+	public function actionOingJson()
+	{
+		$findO = Oing::Model()->findAll();
+
+		$this->renderJSON($findO);
+	}
+
+	public function actionOitb()
+	{
+		$this->renderPartial('oitb');
+	}
+	public function actionOitbJson()
+	{
+		$findO = Oitb::Model()->findAll();
+
+		$this->renderJSON($findO);
+	}
+
+	public function actionOrmc()
+	{
+		$this->renderPartial('ormc');
+	}
+	public function actionOrmcJson()
+	{
+		$findO = Ormc::Model()->findAll();
+
+		$this->renderJSON($findO);
+	}
+
+
+	public function actionSlide()
+	{
+		$this->renderPartial('slide');
+	}
+	public function actionSlideJson()
+	{
+		$findO = Slider::Model()->findAll();
+
+		$this->renderJSON($findO);
+	}
 }
