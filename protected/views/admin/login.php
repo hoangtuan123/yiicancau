@@ -132,6 +132,7 @@ body {
       <input type="text" placeholder="username" ng-model="username" />
       <input type="password" placeholder="password" ng-model="password" />
       <button type="submit"  ng-click="submitbutton()">login</button>
+      <p class="message" style="color:red">{{err}}</p>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
   </div>

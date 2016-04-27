@@ -4,6 +4,7 @@
  * This is the model class for table "usermenber".
  *
  * The followings are the available columns in table 'usermenber':
+ * @property integer $id
  * @property string $username
  * @property string $password
  * @property string $displayname
@@ -37,7 +38,7 @@ class Usermenber extends CActiveRecord
 			array('birthday, insertdate', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('username, password, displayname, email, birthday, insertdate, image, role', 'safe', 'on'=>'search'),
+			array('id, username, password, displayname, email, birthday, insertdate, image, role', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,6 +59,7 @@ class Usermenber extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'id' => 'ID',
 			'username' => 'Username',
 			'password' => 'Password',
 			'displayname' => 'Displayname',
@@ -87,6 +89,7 @@ class Usermenber extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('id',$this->id);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('displayname',$this->displayname,true);

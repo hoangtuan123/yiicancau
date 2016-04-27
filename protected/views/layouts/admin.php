@@ -364,6 +364,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </aside><!-- /.control-sidebar -->
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
+          <div ng-controller="loginOut">
+            <button type="submit"  ng-click="submitbutton()">logout</button>
+          </div>
       <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
 
