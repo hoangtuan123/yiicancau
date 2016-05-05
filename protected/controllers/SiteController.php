@@ -59,10 +59,14 @@ class SiteController extends Controller
 	public function actionProductDetailJson(){
 		$data = $_GET['id'];
 		$criteria = new CDbCriteria;
-		$criteria->limit = 1;
-		$criteria->params=array('MaSP' => $data,);
-		$records = Oitm::model()->find($criteria);
+		//$criteria->limit = 1;
+		//$criteria->params=array('MaSP' => $data);
+		//$records = Oitm::model()->find($criteria);
+		$records= Oitm::model()->find('MaSP=:MaSP', array(':MaSP'=>$data));
+		//echo $data;
 		$this->renderJSON($records);
+
+
 	}
 
 	public function actionProdcutSearch(){
